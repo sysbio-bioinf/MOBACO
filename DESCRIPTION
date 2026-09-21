@@ -1,0 +1,55 @@
+Package: MOBACO
+Title: Multi-Objective Balance-Coverage Optimization for Observational Studies
+Version: 0.1.0
+Authors@R: c(
+    person("Metehan", "Oruc", , "metehan.oruc@uni-ulm.de",
+           role = c("aut", "cph"),
+           comment = c(ORCID = "0009-0007-1043-3626")),
+    person("Johann M.", "Kraus", role = "aut",
+           comment = c(ORCID = "0000-0002-9534-6295")),
+    person("Kathrin", "Stucke-Straub", role = "aut",
+           comment = c(ORCID = "0009-0008-0697-534X")),
+    person("Hans A.", "Kestler", , "hans.kestler@uni-ulm.de",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4759-5254")))
+Description: Constructs balanced cohorts for observational studies by jointly
+    optimizing covariate balance and sample coverage with the NSGA-II
+    multi-objective genetic algorithm. Rather than returning a single adjusted
+    cohort, the method approximates the Pareto front of non-dominated subsets,
+    making the balance-coverage trade-off explicit at the design stage so that
+    the analyst can select an operating point before outcome information is
+    used. Covariate imbalance is measured with the BOSS-B metric of Nikolaev
+    et al. (2013) <doi:10.1287/opre.1120.1118>. Includes tools for comparison
+    with propensity score matching, visualization of the Pareto front, and an
+    optional Shiny interface.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+URL: https://github.com/sysbio-bioinf/MOBACO
+BugReports: https://github.com/sysbio-bioinf/MOBACO/issues
+Depends:
+    R (>= 4.0.0)
+Imports:
+    Rcpp (>= 1.0.0),
+    mco,
+    dplyr,
+    readr,
+    haven,
+    readxl,
+    tools,
+    stats,
+    utils
+LinkingTo: Rcpp
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    gt,
+    ggplot2,
+    plotly,
+    MatchIt,
+    shiny,
+    DT,
+    cobalt
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
