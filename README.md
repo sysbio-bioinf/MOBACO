@@ -40,7 +40,7 @@ mobaco_app()
 ```
 
 Press **Load Example Cohort**, confirm the preselected treatment variable
-and covariates, and start the optimization. The frontier is interactive:
+and covariates, and start the optimization. The frontend is interactive:
 click a point to inspect the corresponding cohort and its balance
 diagnostics.
 
