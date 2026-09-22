@@ -100,14 +100,6 @@ This repository holds the software. The simulation study and the real-data
 analysis reported in the manuscript, together with the computed results,
 are available from the authors on request.
 
-## Notes
-
-The balance objective operates on binned covariates: continuous covariates
-are cut into equal-width intervals, ordinal and categorical ones keep their
-observed levels. Because the measure sums over covariates, absolute
-imbalance values are comparable between methods within one setting, but not
-across settings that differ in the number of covariates.
-
 ## Funding
 
 MO acknowledges support by the "Kooperative Promotionskolloquium Data
