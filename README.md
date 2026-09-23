@@ -18,15 +18,18 @@ remotes::install_github("sysbio-bioinf/MOBACO")
 
 Installing from source requires a C++ compiler: Xcode command line tools on
 macOS (`xcode-select --install`), Rtools on Windows, `build-essential` on
-Linux. To run the baseline comparisons and open the Shiny application:
+Linux. To run the comparison with propensity score matching and to open the
+Shiny application:
 
 ```r
-install.packages(c("MatchIt", "shiny", "DT", "plotly", "gt", "ggplot2"))
+install.packages(c("MatchIt", "shiny", "DT", "plotly", "gt"))
 ```
 
-Alternatively, clone the repository and install from the directory:
+Alternatively, clone the repository and install from within the cloned
+directory:
 
 ```r
+setwd("path/to/MOBACO")
 install.packages(".", repos = NULL, type = "source")
 ```
 
@@ -75,8 +78,8 @@ index into the frontier.
 
 `inst/extdata/example_cohort.rds` holds 500 simulated units, 103 of them in
 the group of interest, with nine covariates of which four are confounders.
-Group assignment runs through a logistic model, which puts confounding there
-by construction and leaves the confounders known.
+Group assignment runs through a logistic model, so confounding is present by
+construction and the confounders are known.
 
 The cohort is simulated rather than clinical. That keeps it freely
 distributable and makes it reproducible from a single seed:
